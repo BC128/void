@@ -1,0 +1,19 @@
+{
+  "name": "void",
+  "version": "0.0.1",
+  "description": "Game Eninge",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BC128/void.git"
+  },
+  "author": "BC128",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BC128/void/issues"
+  },
+  "homepage": "https://github.com/BC128/void#readme"
+}
