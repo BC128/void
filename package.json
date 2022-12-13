@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BC128/void/issues"
   },
-  "homepage": "https://github.com/BC128/void#readme"
+  "homepage": "https://github.com/BC128/void#readme",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
 }
