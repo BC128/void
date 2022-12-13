@@ -1,16 +1,11 @@
-type Input_STRING = string
-type Input_NUMBER = number
-type Input_OBJECT = object
-type Input_ANY = any
-type input_HEX = any
-type Return_NUM = number
-type Return_STRING = string
-type Return_OBJECT = object
-type Return_VOID = void
-type Return_HEX = string
-type VectorX = number
-type VectorY = number
-type VectorZ = number
+import { Input_STRING,
+    Return_NUM, 
+    Return_OBJECT, 
+    VectorX, 
+    VectorY, 
+    VectorZ, 
+    _math_type } from "./type"
+
 
 
 /* Defining an interface called _logger_type that has three methods, log, error, and warn. */
@@ -26,20 +21,7 @@ interface _render_type {
 }
 
 /* Defining an interface called _math_type that has a bunch of methods. */
-interface _math_type {
-    add(baseNUM:number,chr:number):Return_NUM
-    sub(baseNUM:number,chr:number):Return_NUM
-    muti(baseNUM:number,chr:number):Return_NUM
-    divid(baseNUM:number,chr:number):Return_NUM
-    pi():Return_NUM
-    E():Return_NUM
-    LN10():Return_NUM
-    LN10E():Return_NUM
-    LN2E():Return_NUM
-    LN2():Return_NUM
-    SQRT1_2():Return_NUM
-    abs(str:number):Return_NUM
-}
+
 
 /* `_render` is a class that has three methods, `Vector3D`, `Vector2D`, and `VecX`. */
 class _render implements _render_type {
@@ -51,11 +33,7 @@ class _render implements _render_type {
  * @param {VectorZ} z_ - The z-coordinate of the vector.
  * @returns An object with three properties: x, y, and z.
  */
-<<<<<<< HEAD
    async Vector3D(x_:VectorX,y_:VectorY,z_:VectorZ){
-=======
-    Vector3D(x_:VectorX,y_:VectorY,z_:VectorZ):Return_OBJECT{
->>>>>>> 5a780441807edf484415e7ec1ba9c5dd1c3b2720
         return {x:x_,y:y_,z:z_}
     }
 /**
@@ -66,11 +44,7 @@ class _render implements _render_type {
  * @param {VectorY} y_ - The y-coordinate of the vector.
  * @returns An object with two properties, x and y.
  */
-<<<<<<< HEAD
     async Vector2D(x_:VectorX,y_:VectorY){
-=======
-    Vector2D(x_:VectorX,y_:VectorY):Return_OBJECT{
->>>>>>> 5a780441807edf484415e7ec1ba9c5dd1c3b2720
         return {x:x_,y:y_,}
     }
 /**
