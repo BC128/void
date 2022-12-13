@@ -255,6 +255,9 @@ class _hex {
     tohex(){
 
     }
+    hexToDeco(){
+        
+    }
 }
 
 /* Creating a new object called vm and assigning it the properties mathlib and logger. */
