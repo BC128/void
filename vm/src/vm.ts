@@ -7,7 +7,7 @@ type Return_NUM = number
 type Return_STRING = string
 type Return_OBJECT = object
 type Return_VOID = void
-type Return_HEX = string
+type Return_HEX = any
 type VectorX = number
 type VectorY = number
 type VectorZ = number
@@ -244,8 +244,13 @@ class _mathlib implements _math_type {
     }
 }
 class _hex {
-    tohex(){
-
+    public tohex(input:Input_ANY){
+        if (input < 0)
+        {
+          input = 0xFFFFFFFF + input + 1;
+        }
+      
+        return input.toString().toUpperCase();
     }
 }
 
@@ -253,6 +258,8 @@ class _hex {
 const vm = {
     mathlib: new _mathlib(),
     /* `logger` is a class that contains a bunch of functions that log stuff to the console. */
-    logger: new _logger()
+    logger: new _logger(),
+/* Creating a new object called hex and assigning it the value of a new _hex object. */
+    hex: new _hex()
 
 }
