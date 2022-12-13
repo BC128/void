@@ -45,7 +45,7 @@ class _render implements _render_type {
  * @param {VectorZ} z_ - The z-coordinate of the vector.
  * @returns An object with three properties: x, y, and z.
  */
-    Vector3D(x_:VectorX,y_:VectorY,z_:VectorZ){
+   async Vector3D(x_:VectorX,y_:VectorY,z_:VectorZ){
         return {x:x_,y:y_,z:z_}
     }
 /**
@@ -56,7 +56,7 @@ class _render implements _render_type {
  * @param {VectorY} y_ - The y-coordinate of the vector.
  * @returns An object with two properties, x and y.
  */
-    Vector2D(x_:VectorX,y_:VectorY){
+    async Vector2D(x_:VectorX,y_:VectorY){
         return {x:x_,y:y_,}
     }
 /**
@@ -66,7 +66,7 @@ class _render implements _render_type {
  * @param {VectorX} x_ - The vector to be wrapped.
  * @returns An object with a property x.
  */
-    VecX(x_:VectorX):object{
+    async VecX(x_:VectorX){
         return {x:x_}
     }
 /**
@@ -97,7 +97,7 @@ class _render implements _render_type {
  * @param {VectorY} y_ - The y-coordinate of the vector.
  * @returns An object with a property y.
  */
-    VecY(y_:VectorY):object{
+    async VecY(y_:VectorY){
         return {y:y_}
     }
 }
@@ -107,7 +107,7 @@ class _logger implements _logger_type {
  * The function takes a string as an argument and logs it to the console
  * @param {Input_STRING} str - input
  */
-    log(str:Input_STRING){
+    async log(str:Input_STRING){
         console.log(str)
     }
 /**
