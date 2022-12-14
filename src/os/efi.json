@@ -2,9 +2,10 @@
     "name":"TEMPLE",
     "entry":"./bootloader.ts",
     "build":0.01,
-    "file":[
-      "./os/efi.json",
-      "./os/bootloader.ts",
-      "./os/bootlib.ts"
-    ] 
+    "file":{
+     "efi": "/os/efi.json",
+     "bootloader": "/os/bootloader.ts",
+     "bootlib ":"/os/bootlib.ts"
+    }
+
 }

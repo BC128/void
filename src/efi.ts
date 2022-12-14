@@ -1,15 +1,15 @@
 export interface Efi_struc {
     name?:string
     entry?:string
-    build?:number
+    build?:number | string
     // deno-lint-ignore ban-types
-    file?:object
+    file:object[]
     sboot?:boolean
 }
-const os_path = Deno.cwd()
+const os_path = "./src/os/"
 
-const efi_load = Deno.readTextFileSync("./src/os/efi.json")
+const efi_load = Deno.readTextFileSync(os_path+ "efi.json")
 const efi_read:Efi_struc = JSON.parse(efi_load)
 
 
-console.log(efi_read)
+console.log(os_path + efi_read.file[0])
