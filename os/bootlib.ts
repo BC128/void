@@ -7,10 +7,11 @@ export interface Bootlib_Efi_struc {
     file:object[]
     sboot?:boolean
 }
-function efi_load() {
-    Deno.readTextFileSync("./efi.json")
-}
-function bootlib_efi_read():Efi_struc{
 
+function efi_load() {
+    return Deno.readTextFileSync("./efi.json")
 }
-const efi_read:Efi_struc = JSON.parse(efi_load)
+function bootlib_efi_read():Bootlib_Efi_struc{
+    return JSON.parse(efi_load())
+}
+console.log()

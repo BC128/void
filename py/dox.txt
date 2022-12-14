@@ -1,5 +1,0 @@
-https://github.com/soxoj/maigret
-https://github.com/projectdiscovery/subfinder#installation
-https://github.com/sherlock-project/sherlock
-auburn-ise-02.asd.auburn.wednet.edu
-https://quicktype.io/

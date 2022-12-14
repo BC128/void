@@ -1,0 +1,11 @@
+{
+    "name":"TEMPLE",
+    "entry":"./bootloader.ts",
+    "build":0.01,
+    "file":[
+        "efi.json",
+        "bootloader.ts",
+        "bootlib.ts"
+    ],
+    "sboot":false
+}
