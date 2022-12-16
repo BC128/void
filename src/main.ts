@@ -43,16 +43,20 @@ class _RegistryFS {
   public removeItemFile(loc:string | URL){
     Deno.remove(`./src/db/reg/${loc}`)
   }
-  public async getItemFile(loc:string | URL){
-    const decoder = new TextDecoder("utf-8");
-    const data = await Deno.readFile(`./src/db/reg/${loc}`);
-    return decoder.decode(data)
+  public async getItemFile(loc:string){
+    const decoder = new TextDecoder();
+    const data = Deno.readFileSync(("./src/db/reg/"+loc);
+
+    return decoder.
   }
   public async setItemFile(loc:string | URL,data_:string){
     const encoder = new TextEncoder();
     const data = encoder.encode(data_+"\n");
-    const file = await Deno.create(`./src/db/reg/${loc}`)
+    const file = Deno.create(`./src/db/reg/${loc}`)
     await Deno.writeFile(`./src/db/reg/${loc}`, data);
+  }
+  public async setItemGroup(loc:string | URL){
+    await Deno.mkdir(`./src/db/reg/${loc}`,{recursive: true})
   }
 }
 class _Boot {
@@ -60,7 +64,9 @@ class _Boot {
       //_registry.setItem("boot/uptime.reg",`${Date.now()}`)
       //_registry.setItem("boot/verions/pkg.reg",`0.0.1`)
       //_registry.setItem("boot/verions/kernel.reg","0.0.1")
-      _registryFS.setItemFile("boot/test.reg",`${Date.now()}`)
+      _registryFS.setItemGroup("boot")
+      _registryFS.setItemGroup("boot/verions")
+      _registryFS.setItemFile("boot/uptime.reg",`${Date.now()}`)
       _registryFS.setItemFile("boot/verions/pkg.reg",`0.0.1`)
       _registryFS.setItemFile("boot/verions/kernel.reg","0.0.1")
   }
